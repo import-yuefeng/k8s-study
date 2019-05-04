@@ -49,7 +49,9 @@ Service 是对后端提供服务的一组 Pod 的抽象，Service 会绑定到�
 其中, 最容易部署和理解的是第一种, 也就是NodePort模式, 这种模式下你只需要对需要进行暴露的service的yaml/json 描述文件 进行小小的改动即可
 
 以下为一个service yaml 的例子:
+
 ** dashboard-clusterIP.yaml **
+
 ---------------------------------------------------------
 ```
 kind: Service
@@ -72,7 +74,9 @@ spec:
 该模式下可以通过clusterIP:servicePort来访问到服务, 一般为集群内可访问, 集群外不可访问.
 
 接下来我们把它改为NodePort模式:
+
 ** dashboard-NodePort.yaml **
+
 ---------------------------------------------------------
 ```
 kind: Service
@@ -96,7 +100,9 @@ spec:
 但是你也可以改变该范围, 这个值在API server的配置文件中，用--service-node-port-range定义。
 
 如果你要确定指定一个外部port可以通过增加 spec.ports.port.nodePort 参数来实现:
+
 ** dashboard-NodePort-configNodePort.yaml **
+
 ---------------------------------------------------------
 ```
 kind: Service
