@@ -6,6 +6,18 @@
 
 ## 以一个demo来试用本地helm
 
+```
+  $ wget xxx
+  // The helm version you want.
+  $ mv xxx  /usr/local/bin/helm
+  // Mv bin to /usr/bin etc
+  $ helm init
+  // Install easily tiller on kubernetes
+  $ kubectl get pods -n kube-system |grep tiller
+  // To ensure that tiller install successful
+```
+
+
 (demo的helm和tiller均在集群内网中)
 
 
